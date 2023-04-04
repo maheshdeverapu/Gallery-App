@@ -101,7 +101,7 @@ const Home = () => {
                 </button>
             </div>
             <div className="images_content">
-                {(data == []) ? "No data available to display. click on add photo to upload" :
+                {(data==[]) ? <p>No data available to display. click on add photo to upload</p>:
                     (data?.map((ele, index) => {
                         return (
                             <div className="each_image_content">
