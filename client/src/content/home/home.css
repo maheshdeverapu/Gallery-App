@@ -6,9 +6,6 @@
     justify-content: center;
     
 }
-/* .images_content>div{
-    width: 300px;
-} */
 .each_image_content{
     position: relative;
 width: 300px;
@@ -34,7 +31,6 @@ width: 300px;
     border: 2px solid gray;
 }
 .addPhoto_button{
-    /* margin-right: 30px; */
     height: 45px;
     border-radius: 10px;
     background-color: green;
@@ -66,12 +62,10 @@ width: 300px;
     display: flex;
     flex-direction: column;
     width: 35%;
-    /* border: 1px solid black; */
     padding: 40px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 1px 10px 10px 10px rgb(181, 181, 181);
-    /* gap: 30px; */
    
     
 }
