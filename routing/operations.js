@@ -56,6 +56,39 @@ imageOperations.get("/getPosts",async(req,res)=>{
     }
 })
 
+imageOperations.get("/search",async(req,res)=>{
+    try{
+        const searchImage = await UploadImage.find({label: {$regex:req.body.search,$options:"$i"}});
+        res.json({
+            searchImage
+        })
+    }catch(err){
+        res.status(400).json({
+            error:err.message
+        })
+    }
+})
+imageOperations.post("/addPhotoURL",async(req,res)=>{
+    try{
+        if(!req.body.label || !req.body.url){
+            return res.status(401).json({
+                error:"please enter all credentials..."
+            })
+        }
+        const addPhotoUrl = await UploadImage.insert({
+            label : req.body.label,
+            url: req.body.url
+        })
+        res.json({
+            message:"data successfully added"
+        })
+
+    }catch(err){
+        res.status(400).json({
+            error:err.message
+        })
+    }
+})
 imageOperations.delete("/deleteImage/:id",async(req,res)=>{
     try{
         console.log(req.params.id);
