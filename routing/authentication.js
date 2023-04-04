@@ -3,9 +3,9 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/userSignup")
-router.post("/",async(req,res)=>{
+router.post("/signup",async(req,res)=>{
 try{
-    console.log(req.body)
+    // console.log(req.body)
     if(req.body.password !== req.body.confirmPassword){
        return res.status(402).json({
             message:"password and confirm password must be same."
@@ -38,7 +38,7 @@ res.status(400).json({
 }
 })
 
-router.get("/signin",async(req,res)=>{
+router.post("/signin",async(req,res)=>{
     try{
       
         const user = await User.findOne({userName:req.body.userName})
@@ -59,7 +59,7 @@ router.get("/signin",async(req,res)=>{
             res.json({
                 message:"successfully login",
                 token:token,
-                user:user.userName
+                user:user
             })
         })
 

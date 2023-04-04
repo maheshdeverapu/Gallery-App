@@ -1,0 +1,42 @@
+.signin_content{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+    margin-top: 10vh;
+    gap: 50px;
+    border: 1px solid gray;
+    padding: 3%;
+    border-radius: 20px;
+    background-color: gray;
+}
+.signin_content>h2{
+    text-align: center;
+}
+.user_fields{
+    height: 50px;
+    border-radius: 10px;
+
+}
+.signin_button{
+    height: 50px;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: green;
+    color: rgb(228, 228, 228);
+}
+.signin_button:hover{
+    background-color: rgb(2, 97, 2);
+
+}
+.signin_button:active{
+    background-color: rgb(2, 80, 2);
+
+}
+.signup_link{
+    text-align: center;
+    
+    margin-top: 5vh;
+}

@@ -20,7 +20,7 @@ jwt.verify(token,process.env.SECRET_KEY,async(error,payload)=>{
             error: error.message
         })
     }
-    // console.log(error,payload)
+    // console.log("error",error,payload)
 
     const {_id} = payload;
     
